@@ -21,6 +21,25 @@
 
 # Print formatting options:
 
+x = 5
+
+words = 'let\'s go to the park \n this is fun'
+lower_words = words.upper()
+print(lower_words)
+print()
+
+fun_stuff = f'''Let\'s go to the park
+this is fun.'''
+print(f"title: {fun_stuff.title()}")
+print()
+
+print(f'''let's go to the park.
+The park is {x} minutes away.''')
+print()
+
+print(f'let\'s go to the park. The park is {x} minutes away.')
+print()
+
 # f-strings
 
 # Repeating strings
