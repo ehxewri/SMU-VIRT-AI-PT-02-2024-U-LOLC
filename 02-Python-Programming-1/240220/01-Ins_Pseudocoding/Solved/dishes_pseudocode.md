@@ -115,11 +115,13 @@ Our final pseudocode for putting away dishes could look like this:
 #                 Else
 #                    stack it on the bottom shelf
 #    Debug: A fancy plate has a crack in it - what do we do?
-#    Conditional: If (a plate is fancy)
+#    Conditional: 
+                Loop: for (each plate on the dish rack):
+                    If (a plate is fancy)
 #                    put it on the top shelf
-#                 Else if (a plate is plain)
+#                   Else if (a plate is plain)
 #                    put it on the bottom shelf
-#                 Else if (a plate is cracked)
+#                   Else if (a plate is cracked)
 #                    put it in the trash
 # 2. Event 2: Put away bowls:
 #    Loop: for (each bowl on the dish rack):
