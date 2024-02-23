@@ -49,10 +49,12 @@ print(f"Title case: {input_string.title()}")
 # Multiline f-strings
 radius = 4
 pi = 3.14159265358979323846
+print("Radius: {radius}cm\n" + "Circumference: {2 * pi * radius}cm\n" + "Area: {pi * radius ** 2}cm\n")
+
 print(
-    f"Radius: {radius}cm\n"
-    + f"Circumference: {2 * pi * radius}cm\n"
-    + f"Area: {pi * radius ** 2}cm\n"
+    f'''Radius: {radius}cm
+Circumference: {2 * pi * radius}cm
+Area: {pi * radius ** 2}cm'''
 )
 
 # Format floating point values
