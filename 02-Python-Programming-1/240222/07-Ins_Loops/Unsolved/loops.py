@@ -1,5 +1,6 @@
 # Loop through a range of numbers (0 through 4)
-
+for x in range(5):
+    print(x)
 
 print("-" * 40)
 
@@ -28,7 +29,23 @@ print("-" * 40)
 print("-" * 40)
 
 # Make changes to each item in a list
+numbers = [9, 6, 4, 9]
+for idx in range(len(numbers)):
+    # Add 1 to the list item
+    numbers[idx] += 1
+    print(numbers[idx])
 
+numbers = [9, 6, 4, 9]
+for idx in range(len(numbers)):
+    # Add 1 to the list item
+    numbers[idx] = numbers[idx] + 1
+    print(numbers[idx])
+
+numbers = [9, 6, 4, 9]
+for idx in range(len(numbers)):
+    # Add 1 to the list item
+    numbers[idx] = 1
+    print(numbers[idx])
 
 print("-" * 40)
 

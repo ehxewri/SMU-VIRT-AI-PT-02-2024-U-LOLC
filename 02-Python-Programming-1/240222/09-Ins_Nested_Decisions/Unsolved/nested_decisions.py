@@ -41,3 +41,10 @@ price = 30.0
 
 
     # Once complete, ask the user if they want to quit
+
+x = 0
+while True:
+    print(x)
+    x += 1 #x = x + 1
+    if x == 10:
+        break

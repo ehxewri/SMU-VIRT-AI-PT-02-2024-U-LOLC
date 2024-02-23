@@ -22,3 +22,17 @@ cities_daily_cost = [150, 70, 60, 80, 110, 125]
 # Use a for loop to loop through both of the lists at the same time, since
 # they're the same length, and print out the city and daily cost on the same
 # line
+
+
+for idx in range(len(numbers)):
+    # Add 1 to the list item
+    numbers[i] += 1
+
+for number in numbers:
+    # Add 1 to the list item
+    number += 1
+
+
+zoo = ["cow", "dog", "bee", "zebra"]
+for animal in zoo:
+    print(animal.upper())
