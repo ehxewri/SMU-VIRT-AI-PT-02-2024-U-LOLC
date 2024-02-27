@@ -8,6 +8,7 @@ for letter in fish:
 print(letters)
 
 # List comprehensions provide concise syntax for creating lists
+letters = [letter for letter in fish]
 
 
 # We can manipulate each element as we go
@@ -18,7 +19,7 @@ for letter in fish:
 print(capital_letters)
 
 # List comprehension for the above
-
+capital_letters = [letter.upper() for letter in fish]
 
 # We can also add conditional logic (if statements) to a list comprehension
 july_temperatures = [87, 85, 92, 79, 106]
@@ -29,7 +30,8 @@ for temperature in july_temperatures:
 print(hot_days)
 
 # List comprehension with conditional
-
+hot_days = [temperature for temperature in july_temperatures if temperature > 90]
+print(hot_days)
 
 # We can also perform calculations in a list comprehension
 circle_radii = [2.4, 4.5, 6.2, 7.6, 10.5]
@@ -40,8 +42,10 @@ for radius in circle_radii:
 print(diameters)
 
 # List comprehension for the calculation
-
+diameters = [2 * pi * radius for radius in circle_radii]
+print(diameters)
 
 # It's even possible to perform list functions on a list comprehension
 # Let's find the maximum diameter from our list of radii
-
+max(diameters)
+max([2 * pi * radius for radius in circle_radii])

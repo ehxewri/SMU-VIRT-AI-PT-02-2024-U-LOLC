@@ -100,7 +100,7 @@ while True:
     # Create a variable for the menu item number
     i = 1
     # Create a dictionary to store the menu for later retrieval 
-    menu_items = {}
+    menu_items = {} # {0 : "everything ever", 1 : "hidden figures", 2 : "elemental"}
 
     # Print the options to choose from film titles (all the first level 
     # dictionary items in films).
@@ -112,7 +112,7 @@ while True:
         i += 1
 
     # Get the user's input
-    film_selection = input("Type menu number to view or q to quit: ")
+    film_selection = input("Type menu number to view or q to quit: ") # 1
 
     # Exit the loop if user typed 'q'
     if film_selection == 'q':
@@ -122,21 +122,21 @@ while True:
         # Check if the user's input is a valid option
         if int(film_selection) in menu_items.keys():
             # Save the film name to a variable
-            film_selection_name = menu_items[int(film_selection)]
+            film_selection_name = menu_items[int(film_selection)] # Hidden Figures
             # Print out the film they selected
             print(f"You selected {film_selection_name}")
 
             # Display the heading for the data
             print(menu_dashes)
-            print(f"Information about {film_selection_name}")
+            print(f"Information about {film_selection_name}") # Hidden Figures
             print(menu_dashes)
             print("Dictionary Reference                   | Information")
             print("---------------------------------------|--------------------")
 
             # Print out the data from the selected film
-            for key, value in films[film_selection_name].items():
+            for key, value in films[film_selection_name].items(): # Hidden Figures
                 # Check if the value is a dictionary to handle differently
-                if type(value) is dict:
+                if type(value) is dict:                               # box_office_in_millions : {us : 13, uk : 14}
                     # Iterate through the dictionary items
                     for key2, value2 in value.items():
                         # Print the film data
@@ -145,7 +145,7 @@ while True:
                         print(f"{key}['{key2}']{item_spaces} | "
                               + f"{value2}")
                 # Check if the value is a list to handle differently
-                elif type(value) is list:
+                elif type(value) is list:  # "writer": ["Allison Schroeder", "Theodore Melfi"]
                     # Iterate through the list items
                     for i in range(len(value)):
                         # Print the film data
@@ -157,7 +157,7 @@ while True:
                     # Print the film data
                     num_item_spaces = 38 - len(key)
                     item_spaces = " " * num_item_spaces
-                    print(f"{key}{item_spaces} | {value}")
+                    print(f"{key}{item_spaces} | {value}")  # "director": "Theodore Melfi"
             
             print(menu_dashes)
             input("Press enter to return to the main menu.")

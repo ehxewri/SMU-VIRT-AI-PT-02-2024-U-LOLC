@@ -29,14 +29,14 @@ film = {
 
 # If we don't know all of the keys in the dictionary that we
 # may want to access, we can use keys() to list them for us
-
+print(film.keys())
 
 # We may also just want to access a dictionary's values
-
+print(film.values())
 
 # And we can access each item in the dictionary as a key-value pair 
 # as a list of tuples in the format [(key, value)]
-
+print(film.items())
 
 # ---------------------------------------------------------------
 
@@ -44,10 +44,19 @@ film = {
 # parts of the dictionary.
 
 # There are two ways to loop through the keys
-
+for key in film:
+    print(key)
+print()
+for key in film.keys():
+    print(key)
 
 # Looping through a dictionary's values must use the values() method
+for value in film.values():
+    print(value)
 
 
 # When looping through each item in a dictionary, we unpack the (key, value)
 # tuple so we can use them separately
+for key, value in film.items():
+    print(key)
+    print(value)

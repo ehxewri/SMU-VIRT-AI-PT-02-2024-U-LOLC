@@ -1,7 +1,6 @@
 # List of lists of birds
 birds_list = [
-    ["Magpie", "Cockatoo", "Hummingbird", "Ostrich", "Bald Eagle", 
-     "Emperor Penguin", "Lyrebird", "Peacock", "Toucan", "Helmeted Hornbill"],
+    ["Magpie", "Cockatoo", "Hummingbird", "Ostrich", "Bald Eagle", "Emperor Penguin", "Lyrebird", "Peacock", "Toucan", "Helmeted Hornbill"],
     [60, 70, 10, 270, 100, 129, 90, 105, 60, 120],
     [210, 900, 5, 136000, 26000, 112000, 5200, 28600, 4180, 2900],
     [3.5, 45, 5, 40, 30, 20, 30, 15, 20, 30]
@@ -71,19 +70,29 @@ birds_dictionaries = [
     }
 ]
 
+## LIST
 # Print out the data about the 4th bird in birds_list
 
-
 # Calculate the total weight (kg) of all the birds in the birds list
+total_weight = sum(birds_list[2])/1000
 
 
+### DICTIONARY
 # Loop through the birds_dictionaries list
-
+for item in birds_dictionaries:
     # Print the names of the birds and their lifespans from the birds_dictionary
-
+    print(item["name"], item['lifespan'])
+    print((item["name"], item['lifespan']))
 
     # Calculate and print out the size to weight ratio
+    print(item["size (cm)"]/item["weight (g)"])
+    item['weight_ratio'] = round(item["size (cm)"]/item["weight (g)"], 2)
 
+for i in range(len(birds_dictionaries)):
+    birds_dictionaries[i]['weight_ratio'] = round(birds_dictionaries[i]["size (cm)"]/birds_dictionaries[i]["weight (g)"], 2)
+
+print(birds_dictionaries)
 
 # Highest size to weight ratio: 
+
 # Lowest size to weight ratio: 
