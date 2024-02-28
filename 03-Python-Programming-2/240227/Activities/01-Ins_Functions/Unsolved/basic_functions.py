@@ -2,7 +2,12 @@
 def hello():
     print("Hi! This is the hello function.")
 
-# Call the hello function
-hello()
+def scream():
+    print("AHHAHAHA")
 
-# Define the scream function.
+if __name__ == '__main__':
+    print(__name__)
+    hello()
+    scream()
+    scream()
+    scream()

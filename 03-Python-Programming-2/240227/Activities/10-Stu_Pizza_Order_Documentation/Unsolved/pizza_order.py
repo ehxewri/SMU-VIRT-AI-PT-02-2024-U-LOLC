@@ -1,6 +1,22 @@
 """Pizza Order"""
 
 def create_pizza_order():
+    '''
+    Definition:
+        This function asks for customer order with 3 toppings and then returns them to the customer
+
+    Args:
+        None
+
+    Raises:
+        ErrorType: If the user enters a number less than 1 or greater than 5
+        then asks the user to try again.
+        
+    Returns:
+        selected_toppings (List): this is a list of the 3 items the customer selected
+    Notes:
+        None
+    '''
     toppings = ['pepperoni', 'mushrooms', 'onions', 'sausage', 'bell peppers']
 
     print("Welcome to the Sal's Famous Pizza!")
@@ -21,5 +37,9 @@ def create_pizza_order():
     print("Here is your order:")
     print("Your pizza comes with:", ", ".join(selected_toppings))
 
+    # return selected_toppings
+
 if __name__ == "__main__":
     create_pizza_order()
+    # selected_toppings = create_pizza_order()
+    # print(selected_toppings)

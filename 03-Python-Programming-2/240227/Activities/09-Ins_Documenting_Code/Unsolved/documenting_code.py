@@ -2,23 +2,31 @@ def my_function(parameter1, parameter2):
     """
     Brief description of the function.
 
-   Optional:
-     More detailed description of what the function does.
+    Definition:
+        we are adding parameter 1 and 2 together and returning parameter 3
 
     Args:
-        arg1 (type): Description of arg1.
-        arg2 (type): Description of arg2.
+        parameter1 (float): this is a data point for a model
+        parameter2 (float): this is an additional data point
 
     Returns:
-        type: Description of the return value or print statement.
+        float: the sum of parameter1 and parameter2
 
     Raises:
         ErrorType: Description of the exception raised, if any.
 
     Examples:
-        Provide some usage examples of the function.
+        x = my_function(1, 2)
 
     Note:
         Any additional notes about the function.
     """
     # Function code here
+    parameter3 = parameter2 + parameter1
+    return parameter3
+
+if __name__ == "__main__":
+    parameter1 = 2
+    parameter2 = 3
+
+    print(my_function(parameter1, parameter2))
