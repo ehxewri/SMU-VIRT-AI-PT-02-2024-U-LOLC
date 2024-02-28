@@ -99,7 +99,7 @@ while True:
 
     # Create a variable for the menu item number
     i = 1
-    # Create a dictionary to store the menu for later retrieval 
+    # Create a dictionary to store the menu for later retrieval
     menu_items = {} # {0 : "everything ever", 1 : "hidden figures", 2 : "elemental"}
 
     # Print the options to choose from film titles (all the first level 
@@ -111,8 +111,10 @@ while True:
         # Add 1 to the menu item number
         i += 1
 
+    print(menu_items)
+
     # Get the user's input
-    film_selection = input("Type menu number to view or q to quit: ") # 1
+    film_selection = input("Type menu number to view or q to quit: ") # "1", "2"
 
     # Exit the loop if user typed 'q'
     if film_selection == 'q':
@@ -122,7 +124,7 @@ while True:
         # Check if the user's input is a valid option
         if int(film_selection) in menu_items.keys():
             # Save the film name to a variable
-            film_selection_name = menu_items[int(film_selection)] # Hidden Figures
+            film_selection_name = menu_items[int(film_selection)] # Elemental
             # Print out the film they selected
             print(f"You selected {film_selection_name}")
 
@@ -134,9 +136,9 @@ while True:
             print("---------------------------------------|--------------------")
 
             # Print out the data from the selected film
-            for key, value in films[film_selection_name].items(): # Hidden Figures
+            for key, value in films[film_selection_name].items(): # Elemental
                 # Check if the value is a dictionary to handle differently
-                if type(value) is dict:                               # box_office_in_millions : {us : 13, uk : 14}
+                if type(value) is dict:                           
                     # Iterate through the dictionary items
                     for key2, value2 in value.items():
                         # Print the film data
@@ -165,6 +167,7 @@ while True:
         else:
             # Tell the customer they didn't select a valid option
             print(f"{film_selection} was not an option.")
+            # break
     else:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
