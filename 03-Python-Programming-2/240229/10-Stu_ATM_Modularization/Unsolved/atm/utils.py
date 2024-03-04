@@ -1,10 +1,5 @@
-"""Helper functions for loading accounts and validating PIN number."""
-
-# Import the dependencies.
-import sys
 import csv
 from pathlib import Path
-
 
 def load_accounts():
     """This function opens the CSV file. And appends each account: the pin and balance,
@@ -13,15 +8,16 @@ def load_accounts():
     Returns:
         accounts (dict object): A dictionary of all the accounts.
     """
-    csvpath = Path('./data/accounts.csv')
+    csvpath = Path('data/accounts.csv')
     accounts = []
     # Open and read the CSV file.
     with open(csvpath, newline='', encoding='utf-8') as csvfile:
         #  Get the rows of the CSV file.
         rows = csv.reader(csvfile)
+        print(rows)
         # Skip reading the header row.
         header = next(rows)
-        for row in rows:
+        for row in rows: # row = [123456,345.65]
             pin = int(row[0])
             balance = float(row[1])
             account = {

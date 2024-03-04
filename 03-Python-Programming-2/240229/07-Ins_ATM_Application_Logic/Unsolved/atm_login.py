@@ -34,9 +34,13 @@ def login(pin):
     Notes:
         Create a for loop to check to validate the PIN against this list of `accounts`.
         If the PIN is validated, print the account's balance formatted to two decimal places and thousandths.
-    """
-
+     """
+     for account in accounts:
+        if int(pin) == account["pin"]:
+            print(f"The account balance for PIN {account['pin']} is: ${account['balance']: ,.2f}.")
+     
 
 
 if __name__ == "__main__":
     # Set the function call equal to a variable called account_balance.
+    account_balance = login(123456)

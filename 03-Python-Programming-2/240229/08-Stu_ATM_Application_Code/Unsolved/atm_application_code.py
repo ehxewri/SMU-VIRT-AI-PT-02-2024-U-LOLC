@@ -39,7 +39,7 @@ def login(pin):
 
 
 # Define the `check_balance` function for the ATM application.
-def check_balance():
+def check_balance(account_balance:float):
     """The function uses the account balance as a parameter.
     and returns the balance of the account.
 
@@ -49,10 +49,11 @@ def check_balance():
     Returns:
         Prints the account balance formatted to two decimal places and thousandths.
     """
-    ## YOUR CODE HERE
+    print(f"the balance in your account is ${round(account_balance, 2)}.")
+
 
 # Define the `make_deposit` function for the ATM application.
-def make_deposit():
+def make_deposit(account_balance, deposit):
     """This function takes in the account balance and deposit amount as parameters.
     Initializes deposit balance equal to the account balance.
     Then validates that the deposit amount is greater than 0.
@@ -67,5 +68,38 @@ def make_deposit():
     Notes:
         The deposit balance should equal the account balance plus the deposit amount.
     """
-    ## YOUR CODE HERE
-    # Initialize deposit_balance outside the if statement
+    if deposit > 0:
+        deposit_balance = account_balance + deposit
+    else:
+        print("Your deposit amount must be positive")
+    return deposit_balance
+
+
+# Define the `make_withdrawal` function for the ATM application.
+def make_withdrawal(account_balance, withdrawal):
+    """This function should take in the account balance and withdrawal amount as parameters.
+    The function validates that the account balance is greater than the withdrawal.
+
+    Args:
+        account_balance (float): The balance of the account.
+        withdrawal (integer): Withdrawals are whole dollars.
+
+    Returns:
+         The function returns the account balance after being adjusted for the withdrawal.
+
+    Notes:
+        The withdrawal balance should equal the account balance minus the withdrawal amount.
+    """
+    if account_balance < withdrawal:
+        print("You do not have the funds to make this withdrawal.")
+    else:
+        withdrawal_balance = account_balance - withdrawal
+
+    # if account_balance > withdrawal:
+    #     withdrawal_balance = account_balance - withdrawal
+    # else:
+    #     print("You do not have the funds to make this withdrawal.")
+
+
+    return withdrawal_balance
+
