@@ -4,7 +4,7 @@ class BankAccount:
     """Creating a Bank Account class with methods"""
     # The __init__ method accepts an argument for the account's balance.
     # It is assigned to the balance attribute.
-    def __init__(self, balance):
+    def __init__(self, balance, account_number=None):
         self.balance = balance
 
     # The deposit method makes a deposit into the account.

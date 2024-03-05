@@ -3,7 +3,7 @@
 # Define the Car class
 class Car:
     """Creating a Car class with methods"""
-    def __init__(self, make, model, body, engine, year, color):
+    def __init__(self, make, model, body, engine, year:int, color):
         self.make = make
         self.model = model
         self.body = body

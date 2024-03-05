@@ -2,6 +2,7 @@
 from CarData import CarExtras
 
 # Create an instance of the CarExtras class.
+                    #  make,    model,    body, engine, year,  color, anti_theft, alarm, tint, ext_warranty
 my_car = CarExtras("Toyota", "Camry", "Sedan", "2.5L", 2022, "Silver", "Yes", "Yes", "No", "No")
 
 # Get the current make
